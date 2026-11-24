@@ -1,0 +1,14 @@
+int countDistinctWayToClimbStairs(long long nStairs)
+{
+     //base case
+     if(nStairs < 0)
+          return 0;
+
+     if(nStairs == 0)
+          return 1;
+
+     // Recursive Call
+     int ans = countDistinstWayToClimbStairs(nStairs - 1) + countDistinctWayToClimbStairs(nStairs - 2);
+
+     return ans;
+}
